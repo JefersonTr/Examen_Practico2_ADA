@@ -21,6 +21,8 @@ raiz.right = Node(15)
 es_valido = check_binary_search_tree_(raiz)
 print(f"¿Es un BST válido?: {es_valido}")
 
+## 2. Rotación Dinámica de Nodos (Swap Nodes)
+
 # Definición del árbol (Hijos del nodo 1, luego del nodo 2, etc.)
 # Representa un árbol con estructura:
 #       1
