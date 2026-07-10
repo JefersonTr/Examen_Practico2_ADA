@@ -1,0 +1,64 @@
+sys.setrecursionlimit(2000)
+
+class Node:
+    def __init__(self, index, depth):
+        self.index = index
+        self.depth = depth
+        self.left = None
+        self.right = None
+        
+def build_tree(indexes):
+    from collections import deque
+    
+    root = Node(1, 1)
+    queue = deque([root])
+    
+    for left_idx, right_idx in indexes:
+        curr_node = queue.popleft()
+        
+        if left_idx != -1:
+            curr_node.left = Node(left_idx, curr_node.depth + 1)
+            queue.append(curr_node.left)
+            
+        if right_idx != -1:
+            curr_node.right = Node(right_idx, curr_node.depth + 1)
+            queue.append(curr_node.right)
+    
+    return root
+    
+def swap_at_depth(node, k):
+    
+    if not node:
+        return
+        
+    if node.depth % k == 0:
+        node.left, node.right = node.right, node.left
+        
+    swap_at_depth(node.left, k)
+    swap_at_depth(node.right, k)
+    
+def inorder_traversal(node, result):
+    
+    if not node:
+        return
+        
+    inorder_traversal(node.left, result)
+    result.append(node.index)
+    inorder_traversal(node.right, result)
+    
+def swapNodes(indexes, queries):
+    
+    root = build_tree(indexes)
+    
+    final_results = []
+    
+    for k in queries:
+        
+        swap_at_depth(root, k)
+        
+        current_inorder = []
+        inorder_traversal(root,current_inorder)
+        
+        final_results.append(current_inorder)
+        
+    return final_results
