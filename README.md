@@ -22,18 +22,25 @@ es_valido = check_binary_search_tree_(raiz)
 print(f"¿Es un BST válido?: {es_valido}")
 
 # Definición del árbol (Hijos del nodo 1, luego del nodo 2, etc.)
-# -1 representa nodos vacíos
-indices = [
+# Representa un árbol con estructura:
+#       1
+#      / \
+#     2   3
+mis_indices = [
     [2, 3],   # Hijos del nodo 1
-    [-1, -1], # Hijos del nodo 2
-    [-1, -1]  # Hijos del nodo 3
+    [-1, -1], # Hijos del nodo 2 (no tiene)
+    [-1, -1]  # Hijos del nodo 3 (no tiene)
 ]
 
-# Consultas de profundidad k
-consultas = [1, 1]
+# Queremos aplicar un intercambio en el nivel 1
+mis_consultas = [1]
 
-# Ejecución
-resultados = swapNodes(indices, consultas)
+# Ejecutamos la función
+resultados = swapNodes(mis_indices, mis_consultas)
 
+# Imprimimos el resultado
+print("Resultado del recorrido In-Order después del intercambio:")
+print(resultados) 
+# Debería imprimir: [[3, 1, 2]]
 # Devuelve una lista con los recorridos In-Order después de cada consulta
 print(resultados)
