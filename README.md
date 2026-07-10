@@ -16,7 +16,7 @@ raiz = Node(10)
 raiz.left = Node(5)
 raiz.right = Node(15)
 
-# Retorna True si es un BST válido, o False si no lo es
+Retorna True si es un BST válido, o False si no lo es
 es_valido = check_binary_search_tree_(raiz)
 print(f"¿Es un BST válido?: {es_valido}")
 
