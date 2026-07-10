@@ -12,14 +12,15 @@ Determina si un árbol binario cumple con las condiciones de ordenamiento de un 
 El código utiliza una función recursiva que valida los límites permisibles ($-\infty$, $+\infty$) para cada nodo:
 
 # Ejemplo de uso conceptual
-# raiz = Node(10)
-# raiz.left = Node(5)
-# raiz.right = Node(15)
+```python
+raiz = Node(10)
+raiz.left = Node(5)
+raiz.right = Node(15)
 
-# Retorna True si es un BST válido, o False si no lo es
-# es_valido = check_binary_search_tree_(raiz)
-# print(f"¿Es un BST válido?: {es_valido}")
-
+Retorna True si es un BST válido, o False si no lo es
+es_valido = check_binary_search_tree_(raiz)
+print(f"¿Es un BST válido?: {es_valido}")
+```
 ## 2. Rotación Dinámica de Nodos (Swap Nodes)
 
 ### ¿Para qué sirve?
