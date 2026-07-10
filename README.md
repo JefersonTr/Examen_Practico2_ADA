@@ -1,4 +1,4 @@
-# Desafíos de Árboles Binarios en Python
+# Examen practico #2 ADA
 
 Este repositorio contiene las soluciones optimizadas para dos problemas clásicos de estructuras de datos: **Validación de un BST** y **Rotación Dinámica de Nodos (Swap Nodes)**.
 
