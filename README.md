@@ -11,7 +11,6 @@ Determina si un árbol binario cumple con las condiciones de ordenamiento de un 
 ### Cómo usarlo
 El código utiliza una función recursiva que valida los límites permisibles ($-\infty$, $+\infty$) para cada nodo:
 
-```python
 # Ejemplo de uso conceptual
 raiz = Node(10)
 raiz.left = Node(5)
@@ -22,6 +21,11 @@ es_valido = check_binary_search_tree_(raiz)
 print(f"¿Es un BST válido?: {es_valido}")
 
 ## 2. Rotación Dinámica de Nodos (Swap Nodes)
+
+### ¿Para qué sirve?
+Este algoritmo permite modificar de forma masiva la estructura de un árbol binario basándose en la profundidad de sus niveles. Su utilidad principal radica en la optimización de consultas: en lugar de recorrer todo el árbol cada vez que se quiere hacer una modificación, el código salta directamente a los niveles que son múltiplos de un valor $k$ e intercambia de posición sus ramas izquierda y derecha. 
+
+Esto es especialmente útil en simulaciones de estructuras dinámicas, problemas avanzados de árboles y competencias de código como HackerRank, ya que reduce drásticamente el tiempo de procesamiento en árboles gigantescos.
 
 # Definición del árbol (Hijos del nodo 1, luego del nodo 2, etc.)
 # Representa un árbol con estructura:
