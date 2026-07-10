@@ -33,6 +33,7 @@ Esto es especialmente útil en simulaciones de estructuras dinámicas, problemas
 #       1
 #      / \
 #     2   3
+```python
 mis_indices = [
     [2, 3],   # Hijos del nodo 1
     [-1, -1], # Hijos del nodo 2 (no tiene)
